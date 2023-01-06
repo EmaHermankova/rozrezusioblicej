@@ -1,7 +1,7 @@
 package org.example;
 
 import java.io.Serializable;
-public class Had extends Zvire implements Serializable {
+public class Had extends Zvire {
     int delka;
 
     public Had(String jmeno, int delka) {

@@ -3,10 +3,11 @@ package org.example;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Random;
-public class Zvire {
+public class Zvire implements Serializable, Comparable<Zvire> {
     String jmeno;
 
     public Zvire(String jmeno) {
@@ -36,5 +37,10 @@ public class Zvire {
         out.close();
 
         System.out.println(brr);
+    }
+
+    @Override
+    public int compareTo(Zvire o) {
+        return jmeno.compareTo(o.jmeno);
     }
 }
